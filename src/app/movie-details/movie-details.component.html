@@ -1,0 +1,25 @@
+<div class="movie-details">
+  <div class="container" *ngIf="film">
+    <a routerLink="/" class="back-btn">Back</a>
+    <div class="card mb-3">
+      <!--<img class="card-img-top" src="../../assets/images/movie_card.jpg" alt="Card image cap">-->
+      <div class="card-body">
+        <h5 class="card-title">{{film.title}}</h5>
+        <p class="card-text">{{film.opening_crawl}}</p>
+        <div class="info">
+          <div>{{'Film Directior: ' + film.director}}</div>
+          <div>{{'Episode Id: ' + film.episode_id}}</div>
+          <div>{{'Created At: ' + film.created}}</div>
+          <div>{{'Edited At: ' + film.edited }}</div>
+          <div>{{'Producer: ' + film.producer}}</div>
+          <div>{{'Release At: ' + film.release_date}}</div>
+        </div>
+        <!--<div class="charecter">-->
+          <!--<img src="../../assets/images/user.png" alt="User Image">-->
+          <!--<span [title]="'Hello'">Plabon Asad</span>-->
+        <!--</div>-->
+      </div>
+    </div>
+  </div>
+</div>
+

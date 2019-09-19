@@ -1,0 +1,37 @@
+.movie-details {
+  padding-top: 100px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.back-btn {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.info {
+  color: #555;
+  font-size: 12px;
+}
+
+.charecter {
+  margin-top: 10px;
+  border-left: 2px solid #ddd;
+  padding-left: 10px;
+}
+
+.charecter img{
+  display: inline-block;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.charecter span {
+  display: inline-block;
+  font-size: 13px;
+  color: #555;
+}

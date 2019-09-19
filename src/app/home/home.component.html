@@ -1,0 +1,41 @@
+<!-- Movie List -->
+<div class="movie-list">
+  <div class="container">
+    <!-- Search form -->
+    <form #searchForm="ngForm" (ngSubmit)="searchFilm()">
+      <div class="input-group mb-3">
+
+        <input name="search_film" [(ngModel)]="search_film" type="text" class="form-control" placeholder="Type movie name"
+               aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <div *ngIf="search_film" (click)="clearSearch()" class="clear-btn"><i class="fa fa-times"></i></div>
+          <button class="btn btn-info" type="submit">Search</button>
+        </div>
+
+      </div>
+    </form>
+
+    <!-- Movie cards -->
+    <div class="card-deck">
+      <div *ngFor="let film of films" class="card">
+        <div (click)="addFavorite(film)" class="favorite-btn"><i class="fa fa-star"></i></div>
+        <div (click)="removeFavorite(film)" class="un-favorite-btn"><i class="fa fa-trash"></i></div>
+        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+        <div class="card-body">
+          <h5 class="card-title"><a href="{{filmUrl(film)}}">{{film.title}}</a></h5>
+          <span>{{'Episode Id-' + film.episode_id + ' | '}}</span> <i>{{film.director}}</i>
+          <p class="card-text">{{ (film.opening_crawl.length > 40) ? (film.opening_crawl | slice:0:40) + ' ...':(film.opening_crawl) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="data_not_found">
+      <h3>No data found!</h3>
+    </div>
+
+  </div>
+</div>
+
+
+
+

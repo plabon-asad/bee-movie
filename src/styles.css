@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/public.css";
+
+/* Bootstrap normalize */
+.nav-link, .navbar-brand {
+  color: #fff;
+  opacity: .9;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #fff;
+  opacity: 1;
+}

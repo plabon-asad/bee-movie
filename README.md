@@ -1,6 +1,27 @@
 # BeeMovie
+BeeMovie is Angular2Swapi library will help developers building angular and ionic applications which are using data from StarWars API.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+
+## Features Lists
+1. The home screen contains a list of films pulled from the [SWAPI](https://swapi.co/api/)
+2. List should be searchable
+3. Films can be favorite, this state should be persisted using local storage
+4. Favourite films should appear at another page by clicking menu 'favorite'
+5. Favourite films can be un-favourite
+6. Film list items can be clicked to show individual film page
+7. Film page should exist on its own URL
+8. Film page should show all the information pulled from the SWAPI endpoint for an individual film
+9. The film page should contain a back to the home link.
+
+## Rest of works did not finished for lack of time
+
+1. Favourite films should appear at the top of the list
+2. A stylized user prompt/alert should show when a film is favorite
+3. The list of characters should display a tooltip when a list item is hovered
+4. The tooltip should show the character's bio pulled from the SWAPI endpoint for people
+
+
 
 ## Development server
 
@@ -13,14 +34,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

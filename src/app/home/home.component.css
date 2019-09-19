@@ -1,0 +1,9 @@
+.movie-list {
+  padding-top: 100px;
+}
+
+/* Bootstrap card */
+.card-deck .card {
+  min-width: 300px;
+  margin-bottom: 15px;
+}
