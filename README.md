@@ -1,9 +1,11 @@
 # BeeMovie
+
 BeeMovie is Angular2Swapi library will help developers building angular and ionic applications which are using data from StarWars API.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Features Lists
+
 1. The home screen contains a list of films pulled from the [SWAPI](https://swapi.co/api/)
 2. List should be searchable
 3. Films can be favorite, this state should be persisted using local storage
@@ -21,11 +23,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. The list of characters should display a tooltip when a list item is hovered
 4. The tooltip should show the character's bio pulled from the SWAPI endpoint for people
 
+## How to run project
 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clone this project
+2. Go to project directory by terminal `cd directory_of_project/bee-movie`
+3. Put command by terminal `npm install`
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
