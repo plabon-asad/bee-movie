@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
  * Service
  */
 import {SwapiService} from '../services/swapi.service';
+import {HelperService} from '../services/helper.service';
 
 @Component({
   selector: 'app-favorite',
@@ -13,7 +14,7 @@ export class FavoriteComponent implements OnInit {
   favorite_data = [];
 
   constructor(
-    private swapiService: SwapiService
+    private swapiService: SwapiService, private helperSrvc: HelperService
   ) {
   }
 
@@ -46,6 +47,7 @@ export class FavoriteComponent implements OnInit {
     const id = film.url.slice(-2, -1);
     this.swapiService.removeFavoriteData(id);
     this.load();
+    this.helperSrvc.presenToast('Favorite', 'Successfully remove.');
   }
 
 }

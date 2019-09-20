@@ -8,6 +8,7 @@
 }
 
 .clear-btn i {
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 9px;
@@ -16,19 +17,11 @@
 }
 
 .favorite-btn {
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 9px;
   color: yellow;
-  z-index: 1;
-  font-size: 20px;
-}
-
-.un-favorite-btn {
-  position: absolute;
-  right: 10px;
-  top: 30px;
-  color: tomato;
   z-index: 1;
   font-size: 20px;
 }

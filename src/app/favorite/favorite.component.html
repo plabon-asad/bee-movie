@@ -3,10 +3,11 @@
     <div *ngIf="favorite_data.length > 0" class="card-deck">
       <div *ngFor="let item of favorite_data" class="card">
         <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-        <div (click)="removeFavorite(item)" class="remove-favorite-btn"><i class="fa fa-trash"></i></div>
+        <div (click)="removeFavorite(item)" class="favorite-btn"><i class="fa fa-star"></i></div>
+        <!--<div (click)="removeFavorite(item)" class="remove-favorite-btn"><i class="fa fa-trash"></i></div>-->
         <div class="card-body">
           <h5 class="card-title">
-            <a href="{{filmUrl(item)}}">{{item.title}}</a>
+            <a routerLink="/{{filmUrl(item)}}">{{item.title}}</a>
           </h5>
           <p class="card-text">{{ (item.opening_crawl.length > 70) ? (item.opening_crawl | slice:0:70) + ' ...':(item.opening_crawl) }}</p>
           <div class="info">

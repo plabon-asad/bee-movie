@@ -15,13 +15,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 7. Film page should exist on its own URL
 8. Film page should show all the information pulled from the SWAPI endpoint for an individual film
 9. The film page should contain a back to the home link.
-
-## Rest of works did not finished for lack of time
-
-1. Favourite films should appear at the top of the list
-2. A stylized user prompt/alert should show when a film is favorite
-3. The list of characters should display a tooltip when a list item is hovered
-4. The tooltip should show the character's bio pulled from the SWAPI endpoint for people
+10. A stylized user prompt/alert should show when a film is favorite
+11. The list of characters should display a tooltip when a list item is hovered. The tooltip should show the character's bio pulled from the SWAPI endpoint for people
 
 ## How to run project
 
@@ -38,6 +33,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Further help
+## Further help 
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

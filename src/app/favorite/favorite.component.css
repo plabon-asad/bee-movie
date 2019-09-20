@@ -7,7 +7,7 @@
 
 .info {
   color: #555;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .remove-favorite-btn {
@@ -18,3 +18,10 @@
   z-index: 1;
   font-size: 20px;
 }
+
+.card-deck .card {
+  min-width: 300px;
+  margin-bottom: 15px;
+}
+
+

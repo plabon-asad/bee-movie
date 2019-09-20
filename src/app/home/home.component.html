@@ -15,14 +15,16 @@
       </div>
     </form>
 
+    <!--<button (click)="showSuccess()">click me</button>-->
+
     <!-- Movie cards -->
     <div class="card-deck">
       <div *ngFor="let film of films" class="card">
-        <div (click)="addFavorite(film)" class="favorite-btn"><i class="fa fa-star"></i></div>
-        <div (click)="removeFavorite(film)" class="un-favorite-btn"><i class="fa fa-trash"></i></div>
+        <div *ngIf="!film.flag" class="favorite-btn"><i (click)="addFavorite(film)" class="fa fa-star-o"></i></div>
+        <div *ngIf="film.flag" class="favorite-btn"><i (click)="removeFavorite(film)" class="fa fa-star"></i></div>
         <!--<img class="card-img-top" src="..." alt="Card image cap">-->
         <div class="card-body">
-          <h5 class="card-title"><a href="{{filmUrl(film)}}">{{film.title}}</a></h5>
+          <h5 class="card-title"><a routerLink="{{filmUrl(film)}}">{{film.title}}</a></h5>
           <span>{{'Episode Id-' + film.episode_id + ' | '}}</span> <i>{{film.director}}</i>
           <p class="card-text">{{ (film.opening_crawl.length > 40) ? (film.opening_crawl | slice:0:40) + ' ...':(film.opening_crawl) }}</p>
         </div>

@@ -7,6 +7,10 @@ import { Routes, RouterModule } from  '@angular/router';
 /* for routing */
 import { Routing } from './app.routes';
 
+/* Toaster */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 /* Angular Module */
 import {FormsModule} from '@angular/forms';
@@ -33,7 +37,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
   imports: [
     BrowserModule, Routing,
     FormsModule, HttpClientModule, HttpClientJsonpModule,
-    JsonpModule,
+    JsonpModule, BrowserAnimationsModule, ToastrModule.forRoot()
   ],
   providers: [
     SwapiService

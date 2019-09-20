@@ -86,6 +86,10 @@ export class SwapiService {
     localStorage.removeItem(`favorite_data_${key_id}`);
   }
 
+  getCharacter(url): Observable<any> {
+    return this.http.get(url);
+  }
+
   /**
    * Get all data of Local storage
    */

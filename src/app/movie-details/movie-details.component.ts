@@ -14,6 +14,7 @@ import {SwapiService} from '../services/swapi.service';
 export class MovieDetailsComponent implements OnInit {
   receiver_id = '';
   film: any;
+  characters = [];
 
   constructor(
     private swapiService: SwapiService, private activeRoute: ActivatedRoute
@@ -34,6 +35,7 @@ export class MovieDetailsComponent implements OnInit {
     this.swapiService.getFilm(id).subscribe(
       res => {
         this.film = res;
+        this.loadCharecters(this.film);
         console.log('Movie details', res);
       },
       err => {
@@ -41,8 +43,21 @@ export class MovieDetailsComponent implements OnInit {
       });
   }
 
-  loadCharecter() {
+  loadCharecters(film) {
+    let characters = film.characters;
+    for (let i in characters) {
+      this.loadCharacter(characters[i]);
+    }
+  }
 
+  loadCharacter(url) {
+    this.swapiService.getCharacter(url).subscribe(
+      resp => {
+        this.characters.push(resp);
+      },
+      err => {
+        console.log(err);
+      });
   }
 
 }
